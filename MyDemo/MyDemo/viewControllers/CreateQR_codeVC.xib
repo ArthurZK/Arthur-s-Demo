@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateQR_codeVC">
+            <connections>
+                <outlet property="contentTF" destination="333-Dr-koK" id="laD-4N-GrT"/>
+                <outlet property="imageView" destination="2Hb-12-gFW" id="bSK-c8-3Bk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Hb-12-gFW">
+                    <rect key="frame" x="150" y="70" width="300" height="300"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2Hb-12-gFW" secondAttribute="height" id="LTb-4a-rdG"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="333-Dr-koK">
+                    <rect key="frame" x="20" y="380" width="560" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7f3-1F-qzR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEf-SO-wEd">
+                    <rect key="frame" x="265" y="470" width="70" height="30"/>
+                    <color key="backgroundColor" red="0.090196078430000007" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Bax-6Z-oo5"/>
+                        <constraint firstAttribute="height" constant="30" id="a76-wZ-eLj"/>
+                    </constraints>
+                    <state key="normal" title="生成"/>
+                    <connections>
+                        <action selector="createAction:" destination="-1" eventType="touchUpInside" id="N9a-c0-T4q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yEf-SO-wEd" firstAttribute="top" secondItem="333-Dr-koK" secondAttribute="bottom" constant="50" id="4iP-cL-jYK"/>
+                <constraint firstItem="yEf-SO-wEd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Iwo-aY-Z23"/>
+                <constraint firstItem="333-Dr-koK" firstAttribute="top" secondItem="2Hb-12-gFW" secondAttribute="bottom" constant="10" id="M3y-2J-d42"/>
+                <constraint firstItem="2Hb-12-gFW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="N4C-zm-chC"/>
+                <constraint firstItem="333-Dr-koK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Sih-ZI-omp"/>
+                <constraint firstItem="2Hb-12-gFW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="URF-Wg-nkY"/>
+                <constraint firstItem="2Hb-12-gFW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="XWC-vg-nff"/>
+                <constraint firstItem="2Hb-12-gFW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="i3u-c4-pAU"/>
+                <constraint firstAttribute="trailing" secondItem="333-Dr-koK" secondAttribute="trailing" constant="20" id="zSd-6G-smT"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XWC-vg-nff"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
